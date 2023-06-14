@@ -1,13 +1,12 @@
 import { NavLink } from "react-router-dom"
-import { HiSun, HiOutlineSun } from "react-icons/hi"
+
 const Header = () => {
   return (
     <header>
            <div className="inner-row">
                       <div className="header-content">
                                 <NavLink to={'/'} className='logo'>
-                                            <span>Albert</span>
-                                           <span>Okundi</span>
+                                            <h2>Ally<span>.</span></h2>
                                 </NavLink>
 
                                 <nav>
@@ -18,8 +17,7 @@ const Header = () => {
                                                       <li><NavLink to={'/'}>Blog</NavLink></li>
                                              </ul>
                                              <div className="right-stuff">
-                                                       <NavLink to={'/contact'}>Get In Touch</NavLink>
-                                                       <span><HiOutlineSun /></span>
+                                                       <NavLink to={'/contact'}>Let&apos;s Talk</NavLink>
                                              </div>
                                 </nav>
                       </div>
