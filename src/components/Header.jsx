@@ -11,10 +11,12 @@ const Header = () => {
 
                                 <nav>
                                              <ul>
-                                                      <li><NavLink to={'/'}>About</NavLink></li>
+                                                      <li><NavLink to={'/'}>About </NavLink></li>
                                                       <li><NavLink to={'/'}>Tech Stack</NavLink></li>
                                                       <li><NavLink to={'/'}>Portfolio</NavLink></li>
                                                       <li><NavLink to={'/'}>Blog</NavLink></li>
+
+                                                      <div className="indicator"></div>
                                              </ul>
                                              <div className="right-stuff">
                                                        <NavLink to={'/contact'}>Let&apos;s Talk</NavLink>

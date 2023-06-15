@@ -42,7 +42,7 @@ header{
     width: 100%;
     height: 85px;
     position: relative;
-    z-index: 2;
+    z-index: 5;
 }
 
 .header-content{
@@ -62,21 +62,108 @@ header{
       margin-left: 3px;
 }
 
-
 .header-content nav,
 .header-content nav ul{
+     position: relative;
        display: flex;
        gap: 30px;
        align-items: center;
+      z-index: 5;
 }
 .header-content nav {
        gap: 150px;
 }
+.header-content nav ul .indicator{
+       position: absolute;
+       left: 0%;
+       bottom: -5px;
+       width: 20px;
+       height: 2px;
+       background: var(--main-color);
+       border-radius: 5px;
+       -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;
+       -ms-border-radius: 5px;
+       -o-border-radius: 5px;
+       transition: all 0.5s ease;
+       -webkit-transition: all 0.5s ease;
+       -moz-transition: all 0.5s ease;
+       -ms-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+}
 .header-content nav ul li a{
       color: var(--dark-color);
       font-size: 15px;
+      position: relative;
+      transition: all 0.3s ease;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+}
+.header-content nav ul li a:hover{
+       color: var(--main-color);
+}
+.header-content nav ul li a::after,
+.header-content nav ul li a::before{
+       content: '';
+       position: absolute;
+       border-radius: 50%;
+       -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+       -ms-border-radius: 50%;
+       -o-border-radius: 50%;
+       transition: transform 0.5s ease;
+       -webkit-transition: transform 0.5s ease;
+       -moz-transition: transform 0.5s ease;
+       -ms-transition: transform 0.5s ease;
+       -o-transition: transform 0.5s ease;
+       transform: scale(0);
+       -webkit-transform: scale(0);
+       -moz-transform: scale(0);
+       -ms-transform: scale(0);
+       -o-transform: scale(0);
 }
 
+.header-content nav ul li a::before{
+        top: -3px;
+        left: -15px;
+        width: 6px;
+        height: 6px;
+        background: rgb(0, 120, 226);
+}
+.header-content nav ul li a::after{
+     top: 2px;
+     left: -8px;
+     width: 4px;
+     height: 4px;
+     background:rgb(50, 141, 226)
+}
+
+.header-content nav ul li a:hover::before,
+.header-content nav ul li a:hover::after{
+       transform: scale(1);
+       -webkit-transform: scale(1);
+       -moz-transform: scale(1);
+       -ms-transform: scale(1);
+       -o-transform: scale(1);
+}
+
+.header-content nav ul li:nth-child(1):hover ~ .indicator{
+      width: 30px;
+}
+.header-content nav ul li:nth-child(2):hover ~ .indicator{
+         left: 25%;
+        width: 30px;
+}
+.header-content nav ul li:nth-child(3):hover ~ .indicator{
+       left: 59%;
+       width: 30px;
+}
+.header-content nav ul li:nth-child(4):hover ~ .indicator{
+     left: 89%;
+     width: 30px;
+}
 .header-content .right-stuff{
   display: flex;
   gap: 20px;
@@ -236,6 +323,7 @@ header{
 .links-muhimu{
        position: absolute;
        right: 10%;
+       z-index: 5;
 }
 
 .links-muhimu ul{
@@ -336,21 +424,36 @@ header{
        -moz-border-radius:50%;
        -ms-border-radius:50%;
        -o-border-radius:50%;
-       animation: float2 25s ease-in-out infinite;
-       -webkit-animation: float2 25s ease-in-out infinite;
+       animation: float2 10s ease-in-out infinite;
+       -webkit-animation: float2 10s ease-in-out infinite;
        background: radial-gradient(       circle at 75% 30%,       rgb(255, 255, 255) 3px,       rgba(163, 206, 241, 0.692) 8%,       rgb(91, 146, 248) 50%,       rgba(4, 54, 202, 0.862) 100%     );
 }
-
+.tiny-bubble{
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top: 35%;
+      right: 5%;
+      border-radius:50%;
+      -webkit-border-radius:50%;
+      -moz-border-radius:50%;
+      -ms-border-radius:50%;
+      -o-border-radius:50%;
+      animation: float2 20s ease-in-out infinite;
+      -webkit-animation: float2 5s ease-in-out infinite;
+      background: radial-gradient(       circle at 75% 30%,       rgb(255, 255, 255) 3px,       rgba(163, 206, 241, 0.692) 8%,       rgb(91, 146, 248) 50%,       rgba(4, 54, 202, 0.862) 100%     );
+}
 .bubble{
-     animation: float 25s ease-in-out infinite;
+     animation: float 15s ease-in-out infinite;
      height: 120px;
      width: 120px;
      border-radius: 50%;
      position: absolute;
      bottom: 20px;
      background: radial-gradient(       circle at 75% 30%,       white 5px,       rgba(204, 228, 248, 0.692) 8%,       rgb(135, 176, 251) 50%,       rgba(4, 152, 202, 0.752) 100%     );
-     /* box-shadow: inset 0 0 20px #fff, inset 10px 0 46px #eaf5fc,       inset 88px 0px 60px #c2d8fe, inset -20px -60px 100px #fde9ea,       inset 0 50px 140px #fcdcde, 0 0 90px #fff; */
-     -webkit-animation: float 25s ease-in-out infinite;
+     /*box-shadow: inset 0 0 20px #fff, inset 10px 0 46px #eaf5fc,       inset 88px 0px 60px #c2d8fe, inset -20px -60px 100px #fde9ea,       inset 0 50px 140px #fcdcde, 0 0 90px #fff;
+     */-webkit-animation: float 25s ease-in-out infinite;
+     -webkit-animation: float 15s ease-in-out infinite;
 }
 .bubble a{
        color: var(--dark-color);
@@ -364,6 +467,38 @@ header{
       display: flex;
       font-size: 25px;
       color: var(--main-color);
+}
+.scroll-down{
+       width: 80px;
+       height: 80px;
+       position: absolute;
+       border-radius: 50%;
+       right: 5%;
+       bottom: 5%;
+       -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+       -ms-border-radius: 50%;
+       -o-border-radius: 50%;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+}
+.scroll-down p{
+       transform: rotate(90deg);
+       width: 150px;
+       -webkit-transform: rotate(90deg);
+       -moz-transform: rotate(90deg);
+       -ms-transform: rotate(90deg);
+       -o-transform: rotate(90deg);
+       font-size: 14px;
+}
+.scroll-down img{
+        height: 50%;
+        width: 50%;
+        margin-right: 50px;
+        animation: float 3s ease infinite;
+        -webkit-animation: float 3s ease infinite;
 }
    @keyframes float {
      0% {

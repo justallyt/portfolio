@@ -4,6 +4,8 @@ import  { AiFillInstagram } from "react-icons/ai"
 import { GiCloudDownload } from 'react-icons/gi'
 import { NavLink } from "react-router-dom"
 import heroImg from "../assets/heroImg.png"
+import downArrow from "../assets/down-arrow.png"
+
 const HeroSection = () => {
   return (
     <div className="hero-section">
@@ -15,6 +17,7 @@ const HeroSection = () => {
                                                     <div className="circular-line-two"></div>
                                           </div>
                                           <div className="small-bubble"></div>
+                                           <div className="tiny-bubble"></div>
                                         <div className="heading">
                                                   <h1>Hi, <br /> I&apos;m Albert</h1>
                                                   <p> I build amazing user interfaces that create the best possible user experience for various products on the web.</p>
@@ -24,10 +27,10 @@ const HeroSection = () => {
                                         </div>
                                         <div className="links-muhimu">
                                                       <ul>
-                                                             <li className="active"><NavLink to={'/'}><ImGithub /></NavLink></li>
-                                                             <li className="active"><NavLink to={'/'}><BsLinkedin /></NavLink></li>
-                                                             <li className="active"><NavLink to={'/'}><BsTwitter /></NavLink></li>
-                                                             <li className="active"><NavLink to={'/'}><AiFillInstagram /></NavLink></li>
+                                                             <li title="Github" className="active"><NavLink to={'https://github.com/justallyt'}><ImGithub /></NavLink></li>
+                                                             <li title="Linkedin"  className="active"><NavLink to={'/'}><BsLinkedin /></NavLink></li>
+                                                             <li title='Twitter'  className="active"><NavLink to={'/'}><BsTwitter /></NavLink></li>
+                                                             <li title="instagram" className="active"><NavLink to={'/'}><AiFillInstagram /></NavLink></li>
                                                       </ul>
                                         </div>
                                        <div className="hero-imagery-shadow">   </div>
@@ -42,6 +45,11 @@ const HeroSection = () => {
                                        </div>
                                        <div className="hero-image">
                                                   <img src={heroImg} alt="" />
+                                        </div>
+
+                                        <div className="scroll-down">
+                                                    <p>Scroll Down</p>
+                                                    <img src={downArrow} alt="" />
                                         </div>
                               </div>
                  </div>
