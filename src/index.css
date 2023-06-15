@@ -51,10 +51,20 @@ header{
   justify-content: space-between;
   height: 85px;;
 }
+.header-content .logo{
+        overflow: hidden;
+        padding: 0 10px;
+}
 .header-content .logo h2{
      font-family: 'Parisienne', cursive;
      color: black;
      font-size: 40px;
+     opacity: 0;
+     transform: translateX(-100%);
+     -webkit-transform: translateX(-100%);
+     -moz-transform: translateX(-100%);
+     -ms-transform: translateX(-100%);
+     -o-transform: translateX(-100%);
 }
 .header-content .logo span{
       color: var(--main-color);
@@ -72,11 +82,17 @@ header{
 }
 .header-content nav {
        gap: 150px;
+     padding-left: 5%;
+     overflow: hidden;
+}
+
+.header-content nav ul li{
+      line-height: 40px;
 }
 .header-content nav ul .indicator{
        position: absolute;
        left: 0%;
-       bottom: -5px;
+       bottom: 5px;
        width: 20px;
        height: 2px;
        background: var(--main-color);
@@ -90,6 +106,19 @@ header{
        -moz-transition: all 0.5s ease;
        -ms-transition: all 0.5s ease;
        -o-transition: all 0.5s ease;
+       transform: translateY(20px);
+       -webkit-transform: translateY(20px);
+       -moz-transform: translateY(20px);
+       -ms-transform: translateY(20px);
+       -o-transform: translateY(20px);
+       opacity: 0;
+}
+.header-content nav ul li{
+       transform: translateY(-100%);
+       -webkit-transform: translateY(-100%);
+       -moz-transform: translateY(-100%);
+       -ms-transform: translateY(-100%);
+       -o-transform: translateY(-100%);
 }
 .header-content nav ul li a{
       color: var(--dark-color);
@@ -153,15 +182,19 @@ header{
       width: 30px;
 }
 .header-content nav ul li:nth-child(2):hover ~ .indicator{
-         left: 25%;
+         left: 19.5%;
         width: 30px;
 }
 .header-content nav ul li:nth-child(3):hover ~ .indicator{
-       left: 59%;
+       left: 39.5%;
        width: 30px;
 }
 .header-content nav ul li:nth-child(4):hover ~ .indicator{
-     left: 89%;
+     left: 67%;
+     width: 30px;
+}
+.header-content nav ul li:nth-child(5):hover ~ .indicator{
+     left: 91.5%;
      width: 30px;
 }
 .header-content .right-stuff{
@@ -182,6 +215,12 @@ header{
       -moz-border-radius: 30px;
       -ms-border-radius: 30px;
       -o-border-radius: 30px;
+      opacity: 0;
+      transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      -moz-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+      -o-transform: translateX(100%);
 }
 .header-content .right-stuff  span{
      color: whitesmoke;
@@ -213,6 +252,11 @@ header{
      font-size: 70px;
      line-height: 80px;
      color: var(--dark-color);
+     transform: scale(0);
+     -webkit-transform: scale(0);
+     -moz-transform: scale(0);
+     -ms-transform: scale(0);
+     -o-transform: scale(0);
 }
 
 .hero-section-content .heading p{
@@ -220,12 +264,18 @@ header{
       color: var(--dark-color);
       font-size: 17px;
       line-height: 30px;
+      transform: scale(0);
+      -webkit-transform: scale(0);
+      -moz-transform: scale(0);
+      -ms-transform: scale(0);
+      -o-transform: scale(0);
 }
 .hero-section .hero-image{
      position: absolute;
      bottom: 0;
      z-index: 8;
      left: 50%;
+     transform-origin: center;
      transform: translateX(-50%);
      max-width: 600px;
      -webkit-transform: translateX(-50%);
@@ -234,8 +284,8 @@ header{
      -o-transform: translateX(-50%);
 }
 
-.hero-section .hero-imagery-shadow{ 
-      background: radial-gradient(circle at center bottom, #0879db, #388ed877,#add9ff68, #f7fbff06,rgba(251, 253, 255, 0.026), transparent);   
+.hero-section .hero-imagery-shadow{
+     background: radial-gradient(circle at center bottom, #0879db, #388ed877,#add9ff68, #f7fbff06,rgba(251, 253, 255, 0.026), transparent);
      position: absolute;
      width: 80%;
      height:130%;
@@ -307,23 +357,37 @@ header{
        color: var(--dark-color);
        font-size: 15px;
        font-family: "Madera-Medium";
+
 }
 .small-box.special{
        position: absolute;
        top:80px;
        left: 50%;
        z-index: 2;
-       transform: translateX(-50%);
-       -webkit-transform: translateX(-50%);
-       -moz-transform: translateX(-50%);
-       -ms-transform: translateX(-50%);
-       -o-transform: translateX(-50%);
+       transform: translate(-50%, -50px);
+       -webkit-transform: translate(-50%, -50px);
+       -moz-transform: translate(-50%, -50px);
+       -ms-transform: translate(-50%, -50px);
+       -o-transform: translate(-50%, -50px);
+       opacity: 0;
 }
-
+.small-box.experience{
+     opacity: 0;
+        transform: translateX(-100px);
+        -webkit-transform: translateX(-100px);
+        -moz-transform: translateX(-100px);
+        -ms-transform: translateX(-100px);
+        -o-transform: translateX(-100px);
+}
 .links-muhimu{
        position: absolute;
        right: 10%;
        z-index: 5;
+       transform: scale(0);
+       -webkit-transform: scale(0);
+       -moz-transform: scale(0);
+       -ms-transform: scale(0);
+       -o-transform: scale(0);
 }
 
 .links-muhimu ul{
@@ -427,6 +491,12 @@ header{
        animation: float2 10s ease-in-out infinite;
        -webkit-animation: float2 10s ease-in-out infinite;
        background: radial-gradient(       circle at 75% 30%,       rgb(255, 255, 255) 3px,       rgba(163, 206, 241, 0.692) 8%,       rgb(91, 146, 248) 50%,       rgba(4, 54, 202, 0.862) 100%     );
+       opacity: 0;
+       transform: scale(0.5);
+       -webkit-transform: scale(0.5);
+       -moz-transform: scale(0.5);
+       -ms-transform: scale(0.5);
+       -o-transform: scale(0.5);
 }
 .tiny-bubble{
       width: 30px;
@@ -442,6 +512,12 @@ header{
       animation: float2 20s ease-in-out infinite;
       -webkit-animation: float2 5s ease-in-out infinite;
       background: radial-gradient(       circle at 75% 30%,       rgb(255, 255, 255) 3px,       rgba(163, 206, 241, 0.692) 8%,       rgb(91, 146, 248) 50%,       rgba(4, 54, 202, 0.862) 100%     );
+      opacity: 0;
+      transform: scale(0);
+      -webkit-transform: scale(0);
+      -moz-transform: scale(0);
+      -ms-transform: scale(0);
+      -o-transform: scale(0);
 }
 .bubble{
      animation: float 15s ease-in-out infinite;
@@ -454,6 +530,12 @@ header{
      /*box-shadow: inset 0 0 20px #fff, inset 10px 0 46px #eaf5fc,       inset 88px 0px 60px #c2d8fe, inset -20px -60px 100px #fde9ea,       inset 0 50px 140px #fcdcde, 0 0 90px #fff;
      */-webkit-animation: float 25s ease-in-out infinite;
      -webkit-animation: float 15s ease-in-out infinite;
+     opacity: 0;
+     transform: scale(0);
+     -webkit-transform: scale(0);
+     -moz-transform: scale(0);
+     -ms-transform: scale(0);
+     -o-transform: scale(0);
 }
 .bubble a{
        color: var(--dark-color);
