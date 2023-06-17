@@ -1,10 +1,11 @@
 import { NavLink } from "react-router-dom"
 import { gsap } from 'gsap'
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 const Header = () => {
    const logoRef = useRef();
    const linkWrapper = useRef();
    const btnRef = useRef()
+   const [ scroll, setScroll ] = useState(false)
    useEffect(()=>{
           let tl = gsap.timeline();
 
@@ -32,8 +33,17 @@ const Header = () => {
                duration: 0.7
          })
    }, [])
+
+   //change Navbar
+   window.addEventListener("scroll", ()=> {
+           if(window.scrollY >  80){
+                  setScroll(true)
+           }else{
+                  setScroll(false)
+           }
+   })
   return (
-    <header>
+    <header className={ scroll ? 'onscroll' : ''}>
            <div className="inner-row">
                       <div className="header-content">
                                 <NavLink to={'/'} className='logo'>
@@ -42,7 +52,7 @@ const Header = () => {
 
                                 <nav>
                                              <ul ref={linkWrapper}>
-                                                      <li><NavLink to={'/'}>Home</NavLink></li>
+                                                      <li className="active"><NavLink to={'/'}>Home</NavLink></li>
                                                       <li><NavLink to={'/'}>About </NavLink></li>
                                                       <li><NavLink to={'/'}>Tech Stack</NavLink></li>
                                                       <li><NavLink to={'/'}>Portfolio</NavLink></li>

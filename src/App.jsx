@@ -1,3 +1,4 @@
+import AboutSection from "./components/AboutSection"
 import Header from "./components/Header"
 import HeroSection from "./components/HeroSection"
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <>
           <Header />
           <HeroSection />
+          <AboutSection />
     </>
   )
 }
