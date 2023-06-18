@@ -10,7 +10,15 @@ const AboutSection = () => {
                                            <h1>On a mission to paint the web into a beautiful canvas one web project at a time.</h1>
                                            <div className="explanation-texts">
                                                       <p>Hello, My name is <span className="underlined">Albert Okundi</span>, I build things for the web. Over the years, I&apos;ve built products for companies and businesses around the globe ranging from marketing websites to complex solutions and enterprise apps with focus on fast, elegant and accessible user experiences.</p>
-                                                      <p>My technical background allows me to understand the complexities of web development, and I&apos;m always on the lookout for the latest trends and technologies in my field, to consistently learn and seek out ways to improve my skills and improve the projects I&apos;m engaged in.</p>
+                                                      <p>I&apos;m a creative problem solver, adept at analyzing data, and dedicated to staying up-to-date with the latest industry trends. My goal is to provide exceptional leadership and deliver outstanding results in fast-paced and deadline-driven environments.</p>
+                                           </div>
+
+
+
+                                           <div className="skills-section">
+                                                        <p className="quote">Every Problem is a great chance to do your best and grow</p>
+                                                        <h1>Skills & Expertise</h1>
+                                                        <p>Majority of the time, I delve in frontend development and create amazing interfaces, however I am also familiar with the below listed backend technologies to be able to deliver results when I am a one man developer team.</p>
                                            </div>
                             </div>
                </div>

@@ -662,8 +662,15 @@ header.onscroll .header-content .logo span{
       color: whitesmoke;
       line-height: 36px;
 }
-
-
+.skills-section{
+}
+.skills-section p.quote{
+        font-size: 30px;
+        color: var(--main-color);
+        font-family: 'Parisienne', cursive;
+        text-align: center;
+        margin-top: 50px;
+}
 
 
 
