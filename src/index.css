@@ -647,14 +647,21 @@ header.onscroll .header-content .logo span{
      color: whitesmoke;
      width: 75%;
      text-align: center;
-     margin: 20px auto;
+     margin: 20px auto 30px auto;
 }
 
-
-
-
-
-
+.explanation-texts{
+     display: grid;
+     grid-template-columns: repeat(2,1fr);
+     gap: 50px;
+     width: 80%;
+     margin: 20px auto;
+}
+.explanation-texts p{
+      font-size: 18px;
+      color: whitesmoke;
+      line-height: 36px;
+}
 
 
 
