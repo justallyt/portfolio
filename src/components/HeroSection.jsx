@@ -50,16 +50,17 @@ const HeroSection = () => {
           opacity: 1,
           duration: 1
         })
+        tl.to(imageRef.current, {
+              scale: 1,
+              x: '-50%',
+              duration: 0.7
+        })
         tl.to(tinyBubbleRef.current, {
               scale: 1,
              opacity: 1,
              duration: 1
         })
-        tl.to(imageRef.current, {
-          scale: 1,
-          x: '-50%',
-          duration: 0.7
-    })
+      
   }, [tl])
   return (
     <div className="hero-section">

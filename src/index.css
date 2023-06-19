@@ -662,8 +662,7 @@ header.onscroll .header-content .logo span{
       color: whitesmoke;
       line-height: 36px;
 }
-.skills-section{
-}
+
 .skills-section p.quote{
         font-size: 30px;
         color: var(--main-color);
@@ -671,6 +670,87 @@ header.onscroll .header-content .logo span{
         text-align: center;
         margin-top: 50px;
 }
+
+.skills-section p{
+       font-size: 18px;
+       color: whitesmoke;
+       line-height: 36px;
+       width: 800px;
+       text-align: center;
+       margin:0px  auto 30px auto;;
+}
+.skills-row{
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        flex-wrap: wrap;
+        width: 80%;
+        margin: 50px auto 0 auto;
+}
+.skill-moja{
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+     justify-content: center;
+     align-items: center;
+     opacity:0;
+     transform-origin: center;
+     transform: scale(0);
+     -webkit-transform: scale(0);
+     -moz-transform: scale(0);
+     -ms-transform: scale(0);
+     -o-transform: scale(0);
+}
+.skill-moja .skill-icon{
+      width: 80px;
+       height: 80px;
+}
+.skill-icon img{
+      object-fit: contain;
+}
+.skill-moja h4{
+     color: whitesmoke;
+     font-family: "Madera-Thin";
+     letter-spacing: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
