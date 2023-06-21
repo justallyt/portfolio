@@ -25,7 +25,7 @@ const AboutSection = () => {
                    }
 
              }
-            
+             return () => observer.disconnect();
     }, [isIntersecting])
   return (
     <div className="about-section">

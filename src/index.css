@@ -319,9 +319,9 @@ header.onscroll .header-content .logo span{
         display: block;
 }
 .hero-section .hero-imagery-shadow{
-     background: radial-gradient(circle at center bottom, #0879db, #388ed877,#add9ff68, #f7fbff06,rgba(251, 253, 255, 0.026), transparent);
+     background: radial-gradient(circle at center bottom, #0879db, #388ed877,#add9ff68, #f7fbff06,rgba(251, 253, 255, 0.006), transparent);
      position: absolute;
-     width: 80%;
+     width: 100%;
      height:130%;
      left: 50%;
      z-index: 3;
@@ -715,17 +715,100 @@ header.onscroll .header-content .logo span{
      letter-spacing: 1px;
 }
 
+/* Experience Section Styles */
+.experience-section{
+     padding: 100px 0;
+     background: rgba(249, 252, 254, 0.692);
+}
+.experience-section .inner-row{
+     width: 80%;
+}
+.experience-section-content .intro h1{
+     font-size: 70px;
+     font-family: "Madera-Medium";
+}
 
+.experience-row{
+     margin-top: 30px;
+}
 
+.experience-row ul li{
+      border-left: 2px dashed rgba(89, 182, 253, 0.325);;
+      padding-bottom: 60px;
+      padding-left: 2%;
+      display: flex;
+      position: relative;
+}
+.experience-row ul li span{
+      font-size: 14px;
+      display: flex;
+      margin-top: -10px;
+      padding: 10px 20px 12px 20px;
+      border-radius: 50px;
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+      -ms-border-radius: 50px;
+      -o-border-radius: 50px;
+      margin-left: 20px;
+      transition: all 0.5s ease;
+      cursor: pointer;
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+}
+.experience-row ul li.active span,
+.experience-row ul li:hover span{
+        background: rgba(134, 194, 220, 0.115);
+        font-family: "Madera-Medium";
+        color: rgb(70, 71, 72);
+}
+.experience-row ul li::before{
+      content: "";
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      left: -12px;
+      top: 0;
+      border: 2px dashed rgba(89, 182, 253, 0.325);
+      border-radius:50% ;
+      -webkit-border-radius:50% ;
+      background: rgba(249, 252, 254);
+      -moz-border-radius:50% ;
+      -ms-border-radius:50% ;
+      -o-border-radius:50% ;
+}
 
+.experience-row ul li:last-child{
+      border-left: none;
+      padding-bottom: 0;
+}
 
-
-
-
-
-
-
-
+.experience-row .experience-switches{
+      position: relative;
+      width: 300px;
+     
+}
+.experience-switches .active-dot{
+      position: absolute;
+      top:2.7%;
+     
+      left: -5px;
+      width: 12px;
+      height: 12px;
+      background: var(--main-color);
+      border-radius: 50px;
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+      -ms-border-radius: 50px;
+      -o-border-radius: 50px;
+      box-shadow: 0px 0px 10px 1px rgb(48, 162, 249);
+      transition:all 0.5s ease;
+      -webkit-transition:all 0.5s ease;
+      -moz-transition:all 0.5s ease;
+      -ms-transition:all 0.5s ease;
+      -o-transition:all 0.5s ease;
+}
 
 
 
