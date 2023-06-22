@@ -6,7 +6,7 @@
 }
 
 :root{
-     --main-color: rgb(0, 120, 226);
+     --main-color: rgb(0, 217, 177);
      --whitish: rgba(236, 240, 248, 0.5);
      --dark-color: rgb(0, 19, 34);
      --blue-dark-color: rgb(1, 1, 27);
@@ -320,6 +320,7 @@ header.onscroll .header-content .logo span{
 }
 .hero-section .hero-imagery-shadow{
      background: radial-gradient(circle at center bottom, #0879db, #388ed877,#add9ff68, #f7fbff06,rgba(251, 253, 255, 0.006), transparent);
+     background: radial-gradient(circle at center bottom, rgb(16, 226, 188), rgba(57, 225, 194, 0.429),rgba(174, 249, 235, 0.281), rgba(244, 255, 253, 0.023),rgba(251, 255, 254, 0.006), transparent );
      position: absolute;
      width: 100%;
      height:130%;
@@ -524,7 +525,7 @@ header.onscroll .header-content .logo span{
        -o-border-radius:50%;
        animation: float2 10s ease-in-out infinite;
        -webkit-animation: float2 10s ease-in-out infinite;
-       background: radial-gradient(       circle at 75% 30%,       rgb(255, 255, 255) 3px,       rgba(163, 206, 241, 0.692) 8%,       rgb(91, 146, 248) 50%,       rgba(4, 54, 202, 0.862) 100%     );
+       background: radial-gradient(       circle at 75% 30%,       rgb(255, 255, 255) 3px,       rgba(163, 241, 218, 0.692) 8%,       rgb(103, 247, 221) 50%,       rgba(9, 205, 163, 0.862) 100%);
        opacity: 0;
        transform: scale(0.5);
        -webkit-transform: scale(0.5);
@@ -545,7 +546,7 @@ header.onscroll .header-content .logo span{
       -o-border-radius:50%;
       animation: float2 20s ease-in-out infinite;
       -webkit-animation: float2 5s ease-in-out infinite;
-      background: radial-gradient(       circle at 75% 30%,       rgb(255, 255, 255) 3px,       rgba(163, 206, 241, 0.692) 8%,       rgb(91, 146, 248) 50%,       rgba(4, 54, 202, 0.862) 100%     );
+      background: radial-gradient(       circle at 75% 30%,       rgb(255, 255, 255) 3px,       rgba(163, 241, 218, 0.692) 8%,       rgb(103, 247, 221) 50%,       rgba(9, 205, 163, 0.862) 100%);
       opacity: 0;
       transform: scale(0);
       -webkit-transform: scale(0);
@@ -560,7 +561,7 @@ header.onscroll .header-content .logo span{
      border-radius: 50%;
      position: absolute;
      bottom: 20px;
-     background: radial-gradient(       circle at 75% 30%,       white 5px,       rgba(204, 228, 248, 0.692) 8%,       rgb(135, 176, 251) 50%,       rgba(4, 152, 202, 0.752) 100%     );
+     background: radial-gradient(       circle at 75% 30%,       rgb(255, 255, 255) 3px,       rgba(163, 241, 218, 0.692) 8%,       rgb(103, 247, 221) 50%,       rgba(9, 205, 163, 0.862) 100%);
      /*box-shadow: inset 0 0 20px #fff, inset 10px 0 46px #eaf5fc,       inset 88px 0px 60px #c2d8fe, inset -20px -60px 100px #fde9ea,       inset 0 50px 140px #fcdcde, 0 0 90px #fff;
      */-webkit-animation: float 25s ease-in-out infinite;
      -webkit-animation: float 15s ease-in-out infinite;
@@ -730,16 +731,18 @@ header.onscroll .header-content .logo span{
 
 .experience-row{
      margin-top: 30px;
+     display: grid;
+     grid-template-columns: 300px auto;
 }
 
-.experience-row ul li{
+.experience-switches ul li{
       border-left: 2px dashed rgba(89, 182, 253, 0.325);;
       padding-bottom: 60px;
       padding-left: 2%;
       display: flex;
       position: relative;
 }
-.experience-row ul li span{
+.experience-switches ul li span{
       font-size: 14px;
       display: flex;
       margin-top: -10px;
@@ -757,13 +760,13 @@ header.onscroll .header-content .logo span{
       -ms-transition: all 0.5s ease;
       -o-transition: all 0.5s ease;
 }
-.experience-row ul li.active span,
-.experience-row ul li:hover span{
+.experience-switches ul li.active span,
+.experience-switches ul li:hover span{
         background: rgba(134, 194, 220, 0.115);
         font-family: "Madera-Medium";
         color: rgb(70, 71, 72);
 }
-.experience-row ul li::before{
+.experience-switches ul li::before{
       content: "";
       width: 20px;
       height: 20px;
@@ -779,7 +782,7 @@ header.onscroll .header-content .logo span{
       -o-border-radius:50% ;
 }
 
-.experience-row ul li:last-child{
+.experience-row ul li:nth-child(3){
       border-left: none;
       padding-bottom: 0;
 }
@@ -791,8 +794,7 @@ header.onscroll .header-content .logo span{
 }
 .experience-switches .active-dot{
       position: absolute;
-      top:2.7%;
-     
+      top:5.5px;
       left: -5px;
       width: 12px;
       height: 12px;
@@ -810,15 +812,61 @@ header.onscroll .header-content .logo span{
       -o-transition:all 0.5s ease;
 }
 
+.experience-switches ul li:nth-child(2).active ~ .active-dot{
+       top: 98px;
+}
+.experience-switches ul li:nth-child(3).active ~ .active-dot{
+      top: 191px;
+      left: -6px;
+}
+.experience-content-tabs{
+     border: 1px solid;
+}
+.content-tab-moja{
+      border-left: 1px solid gainsboro;
+}
+.content-tab-moja .position .intro{
+     display: flex;
+     align-items: flex-end;
+     gap: 5px;
+     margin-bottom: 5px;
+}
+.content-tab-moja .position h3{
+     font-size: 30px;
+     line-height: 30px;
+}
+.content-tab-moja .position p{
+     display: flex;
+     gap: 5px;
+     align-items: flex-end;
+     margin-top: 5px;
+     font-family: "Madera-Medium";
+     color: var(--main-color);
+}
+.content-tab-moja .position p span{
+      display: flex;
+      color: var(--main-color);
+      font-size: 18px;
+}
+.content-tab-moja .position h5{
+     font-family: "Madera-Thin";
+     font-size: 15px;
+     font-style: italic;
+     align-items: center;
+     gap: 7px;;
+     display: flex;
+}
+.content-tab-moja .position h5 span{
+      width: 50px;
+      height: 1px;;
+      background: rgba(165, 189, 182, 0.692);
+      margin-top: 5px;
+}
 
-
-
-
-
-
-
-
-
+.experience-texts p{
+      line-height: 32px;
+      margin-top: 5px;
+}
 
 
 
