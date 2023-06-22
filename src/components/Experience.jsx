@@ -1,5 +1,6 @@
 import { useState } from "react"
-import { BsDashCircleDotted } from 'react-icons/bs'
+import { BsDashCircleDotted, BsBrightnessHighFill } from 'react-icons/bs'
+import { experiences } from "../data/experiences";
 const Experience = () => {
     const [ active, setActive ] = useState(0);
 
@@ -27,22 +28,23 @@ const Experience = () => {
                                                 </div>
 
                                                 <div className="experience-content-tabs">
-                                                             <div className="content-tab-moja">
-                                                                        <div className="position">
-                                                                                    <div className="intro">
-                                                                                            <h3>Web Developer</h3>
-                                                                                             <p><span><BsDashCircleDotted /> </span>Amari Consulting Ltd</p>
-                                                                                    </div>
-                                                                                    <h5>2021 <span></span> Present</h5>
-                                                                        </div>
-                                                                        <div className="experience-texts">
-                                                                                   <p>Amari Consulting is a premier digital agency offering web development in Nairobi, Kenya. I was responsible for the timely and efficient coordination of the following:</p>
-                                                                                   <ul>
-                                                                                             <li>Developed, maintained, and shipped production code for client websites primarily using HTML, CSS, Tailwind, JavaScript, and React</li>
-                                                                                             <li>Performed quality assurance tests on various sites to ensure cross-browser compatibility and mobile responsiveness</li>
-                                                                                   </ul>
-                                                                        </div>
-                                                             </div>
+                                                             { experiences.map(item =>  
+                                                                <div className={active === item.id ? "content-tab-moja active" : "content-tab-moja"} key={item.id} >
+                                                                      <div className="position">
+                                                                                  <div className="intro">
+                                                                                          <h3>{item.position}</h3>
+                                                                                           <p><span><BsDashCircleDotted /> </span>{item.company}</p>
+                                                                                  </div>
+                                                                                  <h5>{item.period.yearStart} <span></span> {item.period.yearEnd}</h5>
+                                                                      </div>
+                                                                      <div className="experience-texts">
+                                                                                 <p>{item.textIntro}</p>
+                                                                                 <ul>
+                                                                                         { item.duties.map(kitu => <li key={kitu}><span><BsBrightnessHighFill /></span>{kitu}</li>)}
+                                                                                 </ul>
+                                                                      </div>
+                                                               </div>
+                                                            )}
                                                 </div>
                                       </div>
                           </div>

@@ -718,7 +718,7 @@ header.onscroll .header-content .logo span{
 
 /* Experience Section Styles */
 .experience-section{
-     padding: 100px 0;
+     padding: 100px 0 50px;
      background: rgba(249, 252, 254, 0.692);
 }
 .experience-section .inner-row{
@@ -820,10 +820,18 @@ header.onscroll .header-content .logo span{
       left: -6px;
 }
 .experience-content-tabs{
-     border: 1px solid;
+     position: relative;
+     height: 400px;
 }
 .content-tab-moja{
       border-left: 1px solid gainsboro;
+      padding-left: 30px;
+      width: 100%;
+      padding-bottom: 20px;
+      display: none;
+}
+.content-tab-moja.active{
+      display: block;
 }
 .content-tab-moja .position .intro{
      display: flex;
@@ -857,7 +865,7 @@ header.onscroll .header-content .logo span{
      display: flex;
 }
 .content-tab-moja .position h5 span{
-      width: 50px;
+      width: 25px;
       height: 1px;;
       background: rgba(165, 189, 182, 0.692);
       margin-top: 5px;
@@ -868,9 +876,21 @@ header.onscroll .header-content .logo span{
       margin-top: 5px;
 }
 
+.experience-texts ul{
+      margin-top: 10px;
+      width: 90%;
+}
 
-
-
+.experience-texts ul li {
+     margin-bottom: 10px;
+     display: grid;
+     grid-template-columns: 20px auto;
+}
+.experience-texts ul li span{
+      color: var(--main-color);
+     display: flex;
+     margin-top: 5px;
+}
 
 
 
