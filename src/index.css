@@ -241,12 +241,14 @@ header.onscroll .header-content .logo span{
       background: var(--main-color);
       font-size: 14px;
       color: whitesmoke;
-      padding: 12px 25px 15px 25px;
-      border-radius: 30px;
-      -webkit-border-radius: 30px;
-      -moz-border-radius: 30px;
-      -ms-border-radius: 30px;
-      -o-border-radius: 30px;
+      width: 120px;
+      height: 48px;
+      font-family: "Madera-Medium";
+      border-radius: 50px;
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+      -ms-border-radius: 50px;
+      -o-border-radius: 50px;
       opacity: 0;
       transform: translateX(100%);
       -webkit-transform: translateX(100%);
@@ -270,7 +272,6 @@ header.onscroll .header-content .logo span{
 .hero-section{
       height: 90vh;
       position: relative;
-      
 }
 
 .hero-section-content .heading{
@@ -379,10 +380,10 @@ header.onscroll .header-content .logo span{
      margin: auto;
      display: flex;
      justify-content: space-between;
-     
 }
 .notable-texts .small-box{
-       padding: 20px 40px;
+       width: 220px;
+       height: 60px;
        border-radius: 40px;
        -webkit-border-radius: 40px;
        -moz-border-radius: 40px;
@@ -392,7 +393,9 @@ header.onscroll .header-content .logo span{
        color: var(--dark-color);
        font-size: 15px;
        font-family: "Madera-Medium";
-
+       display: inline-flex;
+       justify-content: center;
+       align-items: center;
 }
 .small-box.special{
        position: absolute;
@@ -901,7 +904,46 @@ header.onscroll .header-content .logo span{
 
 
 
-
+@media(max-width: 1085px){
+     .hero-section{
+           height: auto;
+     }
+     .hero-section-content .heading{
+           flex-direction: column;
+           position: relative;
+           z-index: 10;
+     }
+     .hero-section-content .heading h1{
+           text-align: center;
+           margin-bottom: 20px;
+           padding-top: 30px;
+     }
+     .hero-section-content .heading p{
+           width: 70%;
+           text-align: center;
+     }
+     .hero-section .hero-image{
+          position: relative;
+          margin-top: -180px;
+     }
+     .hero-section-content .notable-texts{
+          width: 100%;
+     }
+     .notable-texts .small-box{
+          z-index: 5;
+     }
+     .small-box.special{
+          left: 80%;
+          transform: translate(0, -50px)     ;
+          -webkit-transform: translate(0, -50px)     ;
+          -moz-transform: translate(0, -50px)     ;
+          -ms-transform: translate(0, -50px)     ;
+          -o-transform: translate(0, -50px)     ;
+}
+.small-bubble{
+        top: 50px;
+}
+}
 
 
 
