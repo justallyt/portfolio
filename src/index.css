@@ -78,6 +78,7 @@ header.onscroll .inner-row{
 }
 header.onscroll .header-content{
         height: 60px;
+        position: relative;
 }
 .header-content .logo{
         overflow: hidden;
@@ -189,14 +190,14 @@ header.onscroll .header-content .logo span{
         left: -15px;
         width: 6px;
         height: 6px;
-        background: rgb(0, 120, 226);
+        background: var(--main-color);
 }
 .header-content nav ul li a::after{
      top: 2px;
      left: -8px;
      width: 4px;
      height: 4px;
-     background:rgb(50, 141, 226)
+     background:var(--main-color);
 }
 
 .header-content nav ul li a:hover::before,
@@ -255,19 +256,148 @@ header.onscroll .header-content .logo span{
       -moz-transform: translateX(100%);
       -ms-transform: translateX(100%);
       -o-transform: translateX(100%);
+      margin-top: 5px;
 }
-.header-content .right-stuff  span{
-     color: whitesmoke;
+
+.mobile-btn{
+     position: relative;
+     background: rgb(0, 217, 177);
+     margin-top: 5px;
      font-size: 24px;
      cursor: pointer;
-     width: 40px;
-     height: 40px;
-     display: flex;
+     width: 45px;
+     height: 45px;
+     display: none;
      align-items: center;
      justify-content: center;
+     border-radius: 50%;
+     -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+     -ms-border-radius: 50%;
+     -o-border-radius: 50%;
+}
+.mobile-btn span{
+     color: rgb(241, 241, 241);
+}
+/* Sidebar Styles */
+
+.sidebar-wrapper{
+     position: fixed;
+     top: 0;
+     left:0;
+     right: 0;
+     bottom: 0;
+     z-index: -10;
+     display: none;
+}
+.sidebar-wrapper.active{
+     z-index: 999;
+}
+.sidebar-wrapper-overlay{
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     background: var(--dark-color);
+     transition: all 1s ease;
+     transform: translateY(-200px);
+      clip-path: circle(200px at top left);
+      z-index: 99;
+}
+.sidebar-content{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom:0;
+    top:0;
+    padding: 2%  5%;
+    z-index: 100;
+}
+.sidebar-content .inner-row{
+    overflow: hidden;
+}
+.sidebar-head{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+}
+.sidebar-content .logo{
+     transform: translateX(-100%);
+     padding: 0 10px;
+}
+.sidebar-content .logo h2{
+     font-family: 'Parisienne', cursive;
+     font-size: 40px;
+     color: white;
+}
+.sidebar-content .logo span{
+      font-size: 45px;
+      color: var(--main-color);
+}
+.sidebar-content .close-btn{
+     background: var(--main-color);
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     cursor: pointer;
+     margin-right: 3%;
+     opacity: 0;
+     transform: translateX(100%);
+     -webkit-transform: translateX(100%);
+     -moz-transform: translateX(100%);
+     -ms-transform: translateX(100%);
+     -o-transform: translateX(100%);
+}
+.close-btn span{
+     font-size: 25px;
+     display: flex;
+     margin-top: 3px;
+     color: whitesmoke;
 }
 
+.sidebar-nav{
+     width: 100%;
+     padding-top: 5%;
+}
+.sidebar-nav ul li{
+     line-height: 80px;
+     text-align: center;
+     opacity: 0;
+     transform: translateY(50px);
+}
+.sidebar-nav ul li a{
+    font-size: 24px;
+    text-align: center;
+    color: whitesmoke;
+}
 
+.sidebar-nav ul li a
+
+.mobile-contact-btn{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+.mobile-contact-btn a{
+     color: whitesmoke;
+     cursor: pointer;
+     width: 200px;
+     background: var(--main-color);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 60px;
+     margin: 30px auto;
+     border-radius: 60px;
+     opacity: 0;
+     transform: translateY(50px);
+     -webkit-transform: translateY(50px);
+     -moz-transform: translateY(50px);
+     -ms-transform: translateY(50px);
+     -o-transform: translateY(50px);
+}
 /* Hero Section Styles */
 .hero-section{
       height: 90vh;
@@ -792,8 +922,6 @@ header.onscroll .header-content .logo span{
 
 .experience-row .experience-switches{
       position: relative;
-      width: 300px;
-     
 }
 .experience-switches .active-dot{
       position: absolute;
@@ -901,10 +1029,21 @@ header.onscroll .header-content .logo span{
 
 
 
-
+@media(max-width: 1150px){
+     .header-content nav ul{
+          display: none;
+    }
+    .mobile-btn{
+          display: flex;
+    }
+     .sidebar-wrapper{
+             display: block;
+     }
+}
 
 
 @media(max-width: 1085px){
+
      .hero-section{
            height: auto;
      }
@@ -933,19 +1072,72 @@ header.onscroll .header-content .logo span{
           z-index: 5;
      }
      .small-box.special{
-          left: 80%;
+          left: auto;
           transform: translate(0, -50px)     ;
           -webkit-transform: translate(0, -50px)     ;
           -moz-transform: translate(0, -50px)     ;
           -ms-transform: translate(0, -50px)     ;
           -o-transform: translate(0, -50px)     ;
+          right: 20px;
+          left: auto;
 }
 .small-bubble{
         top: 50px;
 }
+.experience-section-content .intro h1{
+      font-size: 50px;
+}
+.explanation-texts,
+.about-section-content h1{
+     width: 100%;
+}
+.experience-section{
+       padding: 100px 0;
+}
+.experience-section .inner-row{
+     width: 90%;
+}
+.experience-row{
+        grid-template-columns: 1fr;
+        gap: 40px;
+}
+.experience-content-tabs{
+       height: auto;
+}
+.experience-switches ul{
+     display: flex;
+     flex-wrap: wrap;
+}
+.experience-switches ul li.active span,
+.experience-switches ul li:hover span{
+       background: var(--main-color);
+       color: whitesmoke;
+}
+.experience-switches ul li{
+       border: none;
+       padding-bottom: 0;
+}
+.experience-switches ul li::before,
+.experience-switches .active-dot{
+        display: none;
+}
+.content-tab-moja .position .intro{
+        flex-direction: column;
+        align-items: flex-start;
+}
+.content-tab-moja{
+       border:none;
+}
+.skills-section p{
+       width: 100%;
+}
 }
 
-
+@media(max-width: 768px){
+     .hero-section .hero-image{
+            margin-top: -130px;
+     }
+}
 
 
    @keyframes float {
