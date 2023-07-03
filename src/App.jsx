@@ -5,6 +5,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Experience from "./components/Experience";
 import Nav from "./components/Navigation/Nav";
+import Works from "./components/Works";
 function App() {
 
   useEffect(()=> {
@@ -16,6 +17,7 @@ function App() {
             <HeroSection />
             <AboutSection />
             <Experience />
+            <Works />
     </>
   )
 }
