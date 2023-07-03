@@ -12,7 +12,7 @@ const Experience = () => {
              <div className="inner-row">
                           <div className="experience-section-content">
                                       <div className="intro">
-                                             <p>Where I have worked</p>
+                                             <h3>Where I have worked</h3>
                                               <h1>Experience</h1>
                                       </div>
 
