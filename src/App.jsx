@@ -6,6 +6,7 @@ import 'aos/dist/aos.css';
 import Experience from "./components/Experience";
 import Nav from "./components/Navigation/Nav";
 import Works from "./components/Works";
+import BlogSection from "./components/BlogSection";
 function App() {
 
   useEffect(()=> {
@@ -18,6 +19,7 @@ function App() {
             <AboutSection />
             <Experience />
             <Works />
+            <BlogSection />
     </>
   )
 }

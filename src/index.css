@@ -1025,7 +1025,7 @@ header.onscroll .header-content .logo span{
 
 /* Portfolio Section */
 .work-section{
-     padding: 80px 0;
+     padding: 0px 0 80px 0;
      background: rgba(249, 252, 254, 0.692);
 }
 .work-section .inner-row{
@@ -1046,17 +1046,18 @@ header.onscroll .header-content .logo span{
      color: whitesmoke;
      font-weight: 500;
 }
-.work-projects{
-     margin-top: 50px
-}
+
 .work-project-moja{
      display: grid;
      grid-template-columns: repeat(2,1fr);
-     padding: 30px 0 80px;
+     padding:80px 0;
      gap: 50px;
      border-bottom: 1px dashed rgba(63, 108, 100, 0.538);
 }
-
+.work-project-moja:last-child{
+       border:none;
+       padding-bottom: 20px;
+}
 .work-project-moja .image-side{
       box-shadow: 0px 0px 8px -3px gainsboro;
       border-radius: 10px;
@@ -1097,27 +1098,141 @@ header.onscroll .header-content .logo span{
 }
 
 
+/* Blog Section */
+.blog-section{
+      padding: 50px 0px 100px 0px;
+      background: rgba(249, 252, 254, 0.692);
+}
 
+.blog-section .inner-row{
+      width: 85%;
+}
+.blog-section-content .intro{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+.blog-section-content .intro h3{
+       font-size: 13px;
+       display: inline-block;
+       padding: 10px 30px;
+       border-radius: 40px;
+       -webkit-border-radius: 40px;
+       -moz-border-radius: 40px;
+       -ms-border-radius: 40px;
+       -o-border-radius: 40px;
+       background: var(--main-color);
+       color: white;
+}
+.blog-section-content .intro h1{
+     font-size: 50px;
+     font-family: "Madera-Medium";
+}
 
+.blog-section-content .intro a{
+     display: flex;
+     gap: 5px;
+     align-items: center;
+     color: var(--blue-dark-color);
+     transition: all 0.5s ease-in-out;
+     -webkit-transition: all 0.5s ease-in-out;
+     -moz-transition: all 0.5s ease-in-out;
+     -ms-transition: all 0.5s ease-in-out;
+     -o-transition: all 0.5s ease-in-out;
+}
+.blog-section-content .intro a span{
+     display: flex;
+     width: 50px;
+     height: 50px;
+     border: 1px solid var(--main-color);
+     justify-content: center;
+     align-items: center;
+     border-radius: 50px;
+     -webkit-border-radius: 50px;
+     -moz-border-radius: 50px;
+     -ms-border-radius: 50px;
+     -o-border-radius: 50px;
+     color: var(--main-color);
+}
+.blog-section-content .intro a:hover{
+     gap: 10px;
+}
+.blog-section-content .articles-row{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 30px;
+        margin-top: 50px;
+}
+.article-moja{
+     box-shadow: 0px 0px 7px -1px rgba(200, 218, 214, 0.779);
+     border-radius: 15px;
+     -webkit-border-radius: 15px;
+     -moz-border-radius: 15px;
+     -ms-border-radius: 15px;
+     -o-border-radius: 15px;
+     height: 500px;
+     position: relative;
+}
+.article-moja img{
+      object-fit: cover;
+      border-radius: 15px;
+      -webkit-border-radius: 15px;
+      -moz-border-radius: 15px;
+      -ms-border-radius: 15px;
+      -o-border-radius: 15px;
+}
+.article-moja .simple-overlay{
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: linear-gradient(transparent, transparent, rgba(255, 255, 255, 0.708) , rgb(255, 255, 255) ) ;
+      border-radius: 13px;
+      -webkit-border-radius: 13px;
+      -moz-border-radius: 13px;
+      -ms-border-radius: 13px;
+      -o-border-radius: 13px;
+}
+.article-moja .article-texts{
+       position: absolute;
+       bottom: 50px;
+       padding: 0px 30px;
+}
+.article-moja .category h4{
+     font-family: "Madera-Thin";
+     font-size: 13px;
+     margin-bottom: 20px;
+     color: white;
+     display: inline-block;
+     padding: 7px 25px;
+     background: var(--main-color);
+     border-radius: 25px;
+     -webkit-border-radius: 25px;
+     -moz-border-radius: 25px;
+     -ms-border-radius: 25px;
+     -o-border-radius: 25px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.article-moja .article-texts .date{
+     display: flex;
+     gap: 10px;
+     align-items: center;
+}
+.article-moja .date span{
+       height: 2px;
+       width: 35px;
+       background: var(--main-color);
+       margin-top: 6px;
+}
+.article-moja .date p{
+      font-size: 14px;
+      color: rgb(51, 51, 51);
+      font-family: "Madera-Medium";
+}
+.article-moja h2{
+     font-size: 35px;
+}
 
 
 

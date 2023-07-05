@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom"
 import amari from "../assets/amari.png"
+import lively from '../assets/Lively.png'
 const Works = () => {
   return (
     <div className="work-section">
@@ -22,6 +23,19 @@ const Works = () => {
 
                                                                              <NavLink to={'/'}>Check it Out</NavLink>
                                                                     </div>
+                                                           </div>
+                                              </div>
+                                              <div className="work-project-moja">
+                                                           <div className="project-texts">
+                                                                    <div className="project-texts-inner">
+                                                                             <h2>Online Chat Application</h2>
+                                                                            <p>An awesome & powerful web application for small and medium-sized businesses giving them a simple, efficient and easy way to engage customer enquiries hence build stronger and fruitful relationships with customers..</p>
+
+                                                                             <NavLink to={'/'}>Check it Out</NavLink>
+                                                                    </div>
+                                                           </div>
+                                                           <div className="image-side">
+                                                                      <img src={lively} alt="" />
                                                            </div>
                                               </div>
                                   </div>
