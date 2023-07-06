@@ -7,6 +7,8 @@ import Experience from "./components/Experience";
 import Nav from "./components/Navigation/Nav";
 import Works from "./components/Works";
 import BlogSection from "./components/BlogSection";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 function App() {
 
   useEffect(()=> {
@@ -20,6 +22,8 @@ function App() {
             <Experience />
             <Works />
             <BlogSection />
+            <Contact />
+            <Footer />
     </>
   )
 }

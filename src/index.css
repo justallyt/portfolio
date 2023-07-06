@@ -795,6 +795,7 @@ header.onscroll .header-content .logo span{
       font-size: 18px;
       color: whitesmoke;
       line-height: 36px;
+      font-family: "Madera-Light";
 }
 
 .skills-section p.quote{
@@ -811,6 +812,7 @@ header.onscroll .header-content .logo span{
        line-height: 36px;
        width: 800px;
        text-align: center;
+       font-family: "Madera-Light";
        margin:0px  auto 30px auto;;
 }
 .skills-row{
@@ -1080,6 +1082,8 @@ header.onscroll .header-content .logo span{
 .project-texts p{
      margin-bottom: 20px;
      line-height: 32px;
+     font-family: "Madera-Light";
+     font-size: 16px;
 }
 
 .project-texts a{
@@ -1235,29 +1239,151 @@ header.onscroll .header-content .logo span{
 }
 
 
+/* Contact Section Styles */
+.contact-section{
+     background: var(--dark-color);
+     padding: 100px 0;
+}
+
+.contact-section-content .intro{
+     text-align: center;
+     color: whitesmoke;
+}
+
+.contact-section-content .intro h4{
+      font-size: 15px;
+      display: inline-block;
+      padding: 10px 40px;
+      font-family: "Madera-Thin";
+      border-radius: 50px;
+      -webkit-border-radius: 50px;
+      background: var(--main-color);
+      -moz-border-radius: 50px;
+      -ms-border-radius: 50px;
+      -o-border-radius: 50px;
+}
+
+.contact-section-content .intro h1{
+     font-size: 55px;
+}
+
+.contact-section-content .intro p{
+     width: 750px;
+     margin: 10px auto;
+     font-family: "Madera-Light";
+     font-size: 18px;
+     line-height: 36px;
+}
+
+.contact-section .form-section{
+     width: 700px;
+     margin: 30px auto;
+}
+.form-row{
+     margin-bottom: 30px;
+}
+.form-row label{
+     font-size: 16px;
+     color: whitesmoke;
+     display: block;
+     margin-bottom: 10px;
+}
+.form-row label span{
+       color: red;
+}
+
+.form-row .input-control{
+     width: 100%;
+     height: 60px;
+     font-family: "Madera-Light";
+     padding-left: 10px;
+     outline: none;
+     border:none;
+     background: rgba(206, 206, 206, 0.197);
+     border-radius: 7px;
+     -webkit-border-radius: 7px;
+     -moz-border-radius: 7px;
+     -ms-border-radius: 7px;
+     -o-border-radius: 7px;
+     color: whitesmoke;
+     font-size: 16px
+}
+.form-row .input-control::placeholder,
+.form-row textarea::placeholder{
+     color: rgba(185, 185, 185, 0.258);
+}
+
+.form-row textarea{
+      width: 100%;
+      height: 150px;
+      padding: 10px;
+      font-size: 16px;
+      resize: none;
+      border-radius: 7px;
+      -webkit-border-radius: 7px;
+      -moz-border-radius: 7px;
+      -ms-border-radius: 7px;
+      -o-border-radius: 7px;
+      background: rgba(206, 206, 206, 0.197);
+      border: none;
+      outline: none;
+      color: whitesmoke;
+      font-family: "Madera-Light";
+}
+.form-btn{
+      display: flex;
+      justify-content: center;
+}
+.form-btn button{
+     cursor: pointer;
+      width: 240px;
+      height: 60px;;
+      font-family: "Madera-Regular";
+      font-size: 15px;
+      color: whitesmoke;
+      background: var(--main-color);
+      border-radius: 60px;
+      border:none;
+      -webkit-border-radius: 60px;
+      -moz-border-radius: 60px;
+      -ms-border-radius: 60px;
+      -o-border-radius: 60px;
+}
 
 
+/* Footer Section */
+footer{
+      padding: 30px;
+      background: var(--dark-color);
+}
+.footer-content{
+     color: whitesmoke;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     border-top: 1px solid rgba(161, 161, 161, 0.33);
+     padding-top: 20px;
+}
+.footer-content p{
+     font-family: "Madera-Light";
+     font-size: 15px;
+}
+.footer-socials ul {
+     display: flex;
+     gap: 40px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.footer-socials ul li a{
+     color: whitesmoke;
+     transition: all .4s ease;
+     -webkit-transition: all .4s ease;
+     -moz-transition: all .4s ease;
+     -ms-transition: all .4s ease;
+     -o-transition: all .4s ease;
+}
+.footer-socials ul li a:hover{
+     color: var(--main-color);
+}
 
 
 
