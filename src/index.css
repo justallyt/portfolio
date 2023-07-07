@@ -160,6 +160,7 @@ header.onscroll .header-content .logo span{
       -moz-transition: all 0.3s ease;
       -ms-transition: all 0.3s ease;
       -o-transition: all 0.3s ease;
+      cursor: pointer;
 }
 .header-content nav ul li a:hover{
        color: var(--main-color);
@@ -215,31 +216,69 @@ header.onscroll .header-content .logo span{
 .header-content nav ul li:nth-child(1):has(a.active) ~ .indicator{
       width: 30px;
       left: 0;
+      opacity: 1;
+      transform: translateY(0);
+      -webkit-transform: translateY(0);
+      -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+      -o-transform: translateY(0);
 }
 .header-content nav ul li:nth-child(2):hover ~ .indicator,
 .header-content nav ul li:nth-child(2):has(a.active) ~ .indicator{
          left: 19.5%;
         width: 30px;
+        opacity: 1;
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
 }
 .header-content nav ul li:nth-child(3):hover ~ .indicator,
 .header-content nav ul li:nth-child(3):has(a.active) ~ .indicator{
        left: 39.5%;
        width: 30px;
+       opacity: 1;
+       transform: translateY(0);
+       -webkit-transform: translateY(0);
+       -moz-transform: translateY(0);
+       -ms-transform: translateY(0);
+       -o-transform: translateY(0);
 }
 .header-content nav ul li:nth-child(4):hover ~ .indicator,
 .header-content nav ul li:nth-child(4):has(a.active) ~ .indicator{
      left: 67%;
      width: 30px;
+     opacity: 1;
+     transform: translateY(0);
+     -webkit-transform: translateY(0);
+     -moz-transform: translateY(0);
+     -ms-transform: translateY(0);
+     -o-transform: translateY(0);
 }
 .header-content nav ul li:nth-child(5):hover ~ .indicator,
 .header-content nav ul li:nth-child(5):has(a.active) ~ .indicator{
      left: 91.5%;
      width: 30px;
+     opacity: 1;
+     transform: translateY(0);
+     -webkit-transform: translateY(0);
+     -moz-transform: translateY(0);
+     -ms-transform: translateY(0);
+     -o-transform: translateY(0);
 }
 .header-content .right-stuff{
   display: flex;
   gap: 20px;
   align-items: center;
+}
+.header-content .right-stuff .contact-btn{
+      opacity: 0;
+      transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      -moz-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+      -o-transform: translateX(100%);
 }
 .header-content .right-stuff a{
       display: flex;
@@ -256,12 +295,6 @@ header.onscroll .header-content .logo span{
       -moz-border-radius: 50px;
       -ms-border-radius: 50px;
       -o-border-radius: 50px;
-      opacity: 0;
-      transform: translateX(100%);
-      -webkit-transform: translateX(100%);
-      -moz-transform: translateX(100%);
-      -ms-transform: translateX(100%);
-      -o-transform: translateX(100%);
       margin-top: 5px;
 }
 

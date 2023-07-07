@@ -5,7 +5,7 @@ import code2 from "../assets/code2.jpg"
 import code3 from '../assets/code3.jpg'
 const BlogSection = () => {
   return (
-    <div className="blog-section">
+    <div id="blog" className="blog-section">
               <div className="inner-row">
                          <div className="blog-section-content">
                                      <div className="intro">
