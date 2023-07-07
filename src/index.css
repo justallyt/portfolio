@@ -36,6 +36,16 @@ img{
       margin: auto;
 }
 
+body::-webkit-scrollbar {
+     width: 6px;  
+   }
+   body::-webkit-scrollbar-track {
+     background: transparent;  
+   }
+   body::-webkit-scrollbar-thumb {
+     background-color: var(--main-color);
+     border-radius: 20px;  
+   }
 
 
 /* Header Styles */
@@ -1066,7 +1076,7 @@ header.onscroll .header-content .logo span{
 
 /* Portfolio Section */
 .work-section{
-     padding: 0px 0 80px 0;
+     padding: 60px 0 80px 0;
      background: rgba(249, 252, 254, 0.692);
 }
 .work-section .inner-row{
@@ -1460,6 +1470,19 @@ footer{
      .sidebar-wrapper{
              display: block;
      }
+    .article-moja h2{
+          font-size: 25px;
+    }
+    .article-moja .category h4{
+         margin-bottom: 10px;
+    }
+    .article-moja .date span{
+        display: none;
+    }
+    .article-moja .article-texts .date{
+           gap: 5px;
+           flex-wrap: wrap;
+    }
 }
 
 
@@ -1555,7 +1578,20 @@ footer{
     .work-project-moja{
           grid-template-columns: repeat(1,1fr);
     }
+  .work-project-moja:nth-child(even) .image-side{
+       order: 1
+  }
+  .work-project-moja:nth-child(even) .project-texts{
+       order: 2
+  }
+  .blog-section-content .articles-row{
+         grid-template-columns: repeat(1,1fr);
+  }
 
+  .contact-section-content .intro p,
+  .contact-section .form-section{
+         width: 100%;
+  }
 }
 
 @media(max-width: 768px){
@@ -1571,8 +1607,21 @@ footer{
             grid-template-columns: repeat(1,1fr);
             gap: 20px;
      }
-     .about-section-content h1{
+     .about-section-content h1,
+      .work-side-intro h2,
+      .blog-section-content .intro ,
+      .contact-section-content .intro h1{
            font-size: 40px;
+     }
+     .blog-section-content .intro{
+             flex-direction: column;
+             align-items: flex-start;
+     }
+     .contact-section-content .intro p{
+          font-size: 16px;
+     }
+     .form-row label{
+            font-size: 15px;
      }
 }
 
@@ -1584,6 +1633,9 @@ footer{
             font-size: 60px;
             line-height: 70px;
             margin-bottom: 10px;
+      }
+      .footer-content{
+            flex-wrap: wrap;
       }
 }
 

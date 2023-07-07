@@ -61,7 +61,7 @@ const Header = () => {
                                 <nav>
                                              <ul ref={linkWrapper}>
                                                       <li><Link activeClass="active" to='home' spy={true} smooth={true} offset={-100}>Home</Link></li>
-                                                      <li><Link activeClass="active" to='about' spy={true} smooth={true} offset={-100}>About </Link></li>
+                                                      <li><Link activeClass="active" to='about' spy={true} smooth={true}>About </Link></li>
                                                       <li><Link activeClass="active" to='experience' spy={true} smooth={true}>Experience</Link></li>
                                                       <li><Link activeClass="active" to='portfolio' spy={true} smooth={true} offset={-100}>Portfolio</Link></li>
                                                       <li><Link to='blog' activeClass="active" spy={true} smooth={true} offset={-60}>Blog</Link></li>
