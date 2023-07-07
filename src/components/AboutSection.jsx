@@ -28,7 +28,7 @@ const AboutSection = () => {
              return () => observer.disconnect();
     }, [isIntersecting])
   return (
-    <div className="about-section">
+    <div id="about" className="about-section">
                <div className="inner-row">
                             <div className="about-section-content">
                                            <div className="intro">

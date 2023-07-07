@@ -8,7 +8,7 @@ const Experience = () => {
           setActive(i);
     }
   return (
-    <div className="experience-section">
+    <div id="experience" className="experience-section">
              <div className="inner-row">
                           <div className="experience-section-content">
                                       <div className="intro">

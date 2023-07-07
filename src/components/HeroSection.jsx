@@ -63,7 +63,7 @@ const HeroSection = () => {
       
   }, [tl])
   return (
-    <div className="hero-section">
+    <div id="home" className="hero-section">
                  <div className="inner-row">
                               <div className="hero-section-content">
                                          

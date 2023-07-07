@@ -202,8 +202,8 @@ header.onscroll .header-content .logo span{
 
 .header-content nav ul li a:hover::before,
 .header-content nav ul li a:hover::after,
-.header-content nav ul li.active a::before,
-.header-content nav ul li.active a::after{
+.header-content nav ul li:has(a.active) a::after,
+.header-content nav ul li:has(a.active) a::before{
        transform: scale(1);
        -webkit-transform: scale(1);
        -moz-transform: scale(1);
@@ -211,22 +211,28 @@ header.onscroll .header-content .logo span{
        -o-transform: scale(1);
 }
 
-.header-content nav ul li:nth-child(1):hover ~ .indicator{
+.header-content nav ul li:nth-child(1):hover ~ .indicator,
+.header-content nav ul li:nth-child(1):has(a.active) ~ .indicator{
       width: 30px;
+      left: 0;
 }
-.header-content nav ul li:nth-child(2):hover ~ .indicator{
+.header-content nav ul li:nth-child(2):hover ~ .indicator,
+.header-content nav ul li:nth-child(2):has(a.active) ~ .indicator{
          left: 19.5%;
         width: 30px;
 }
-.header-content nav ul li:nth-child(3):hover ~ .indicator{
+.header-content nav ul li:nth-child(3):hover ~ .indicator,
+.header-content nav ul li:nth-child(3):has(a.active) ~ .indicator{
        left: 39.5%;
        width: 30px;
 }
-.header-content nav ul li:nth-child(4):hover ~ .indicator{
+.header-content nav ul li:nth-child(4):hover ~ .indicator,
+.header-content nav ul li:nth-child(4):has(a.active) ~ .indicator{
      left: 67%;
      width: 30px;
 }
-.header-content nav ul li:nth-child(5):hover ~ .indicator{
+.header-content nav ul li:nth-child(5):hover ~ .indicator,
+.header-content nav ul li:nth-child(5):has(a.active) ~ .indicator{
      left: 91.5%;
      width: 30px;
 }

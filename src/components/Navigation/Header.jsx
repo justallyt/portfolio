@@ -3,9 +3,10 @@ import { gsap } from 'gsap'
 import { useEffect, useRef, useState, useContext } from "react"
 import { CgMenuRight } from "react-icons/cg"
 import { sidebarContext } from "./context"
-
+import { Link, scrollSpy } from "react-scroll"
 const Header = () => {
  const [sidebarStatus, setSidebarStatus] = useContext(sidebarContext)
+ const [activeLink, setActiveLink ] = useState(false)
    const logoRef = useRef();
    const linkWrapper = useRef();
    const btnRef = useRef()
@@ -48,28 +49,30 @@ const Header = () => {
            }
    })
 
+  const activateList = () => setActiveLink(true)
+  const deactivateList = () => setActiveLink(false)
    //open Mobile Menu
    const openMobileMenu = () => setSidebarStatus(!sidebarStatus);
   return (
     <header className={ scroll ? 'onscroll' : ''}>
            <div className="inner-row">
                       <div className="header-content">
-                                <NavLink to={'/'} className='logo'>
+                                <Link to='home' smooth={true} className='logo'>
                                             <h2 ref={logoRef}>Ally<span>.</span></h2>
-                                </NavLink>
+                                </Link>
 
                                 <nav>
                                              <ul ref={linkWrapper}>
-                                                      <li className="active"><NavLink to={'/'}>Home</NavLink></li>
-                                                      <li><NavLink to={'/'}>About </NavLink></li>
-                                                      <li><NavLink to={'/'}>Tech Stack</NavLink></li>
-                                                      <li><NavLink to={'/'}>Portfolio</NavLink></li>
-                                                      <li><NavLink to={'/'}>Blog</NavLink></li>
+                                                      <li><Link activeClass="active" to='home' spy={true} smooth={true} offset={-100}>Home</Link></li>
+                                                      <li><Link activeClass="active" to='about' spy={true} smooth={true} offset={-100}>About </Link></li>
+                                                      <li><Link activeClass="active" to='experience' spy={true} smooth={true} offset={-100}>Experience</Link></li>
+                                                      <li><Link activeClass="active" to='portfolio' spy={true} smooth={true} offset={-100}>Portfolio</Link></li>
+                                                      <li><Link to={'/'}>Blog</Link></li>
 
                                                       <div className="indicator"></div>
                                              </ul>
                                              <div className="right-stuff">
-                                                       <NavLink to={'/contact'} ref={btnRef}>Let&apos;s Talk</NavLink>
+                                                       <Link to='contact' smooth={true} ref={btnRef}>Let&apos;s Talk</Link>
                                                        <div className="mobile-btn" onClick={openMobileMenu}>
                                                                <span><CgMenuRight /></span>
                                                      </div>

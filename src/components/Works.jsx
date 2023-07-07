@@ -3,7 +3,7 @@ import amari from "../assets/amari.png"
 import lively from '../assets/Lively.png'
 const Works = () => {
   return (
-    <div className="work-section">
+    <div id="portfolio" className="work-section">
               <div className="inner-row">
                          <div className="work-section-content">
                                    <div className="work-side-intro">
