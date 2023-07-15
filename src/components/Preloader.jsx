@@ -1,13 +1,11 @@
 import { useState } from "react"
 import { useEffect } from "react"
 import { useRef } from "react"
-import { clearRequestInterval, requestInterval } from "../utils"
 import { gsap } from "gsap"
 const Preloader = () => {
     const [preloaderCols, setPreloaderCols] = useState()
     const [preloaderLine, setPreloaderLine] = useState()
-    const [progressBar, setPreloaderBar] = useState()
-    let start = 0, handle = {}, before = new Date().getTime()
+    const [preloaderBar, setPreloaderBar] = useState()
     const colsRef = useRef()
     const LineRef = useRef()
     const barRef = useRef()
@@ -18,41 +16,37 @@ const Preloader = () => {
            setPreloaderLine(LineRef.current);
     }, [])
 
-    const runPreloader = () => {
-           let after = new Date().getTime();
-           const pageload = after - before;
+   let initial, done = false, prevTimeStamp
+   console.log(preloaderBar)
+    const playLoader = (timeStamp) => {
+            if(initial === undefined){
+                  initial = timeStamp
+            }
 
-           const loop = () => playLoader();
-           requestAnimationFrame(loop);
-           handle = requestInterval(loop, pageload)
-    }
+            const elapsed = timeStamp - initial;
 
-    const playLoader = () => {
-          if(progressBar){
-                  start = start + 20
-                  progressBar.style.width = `${start}%`;
+            if(prevTimeStamp !== timeStamp){
+                  const count = Math.min(0.1 * elapsed, 100);
 
-                  if(start === 100){
-                        clearRequestInterval(handle);
-                        progressBar.classList.add('remove');
-                        start = null;
-
-                        //start progress line
-                        if(progressBar.classList.contains('remove')){
-                              if(preloaderLine){
-                                      preloaderLine.classList.add('active');
-                              }
-                        }
+                  if(preloaderBar !== undefined){
+                           preloaderBar.current.style.width = `${count}%`
                   }
-          }
+                  if (count === 100) done = true
+            }
+
+            if(!done){
+                   window.requestAnimationFrame(playLoader(2000))
+            }
     }
 
-    window.addEventListener("load", runPreloader);
+    window.addEventListener("load", () => {
+             window.requestAnimationFrame(playLoader(2000))
+    })
   return (
     <div className="preloader">
              <div className="preloader-cols" ref={colsRef}>
                        <div className="preloader-col">
-                                  <div className="preloader-line active"ref={LineRef} ></div>
+                                  <div className="preloader-line"ref={LineRef} ></div>
                        </div>
                        <div className="preloader-col"></div>
                         <div className="preloader-content">
