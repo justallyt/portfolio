@@ -16,9 +16,12 @@ const Preloader = () => {
            setPreloaderLine(LineRef.current);
     }, [])
 
-   let initial, done = false, prevTimeStamp
-   console.log(preloaderBar)
+   let initial, done = false, prevTimeStamp, initialLoadT = new Date().getTime()
+   
     const playLoader = (timeStamp) => {
+            const loadAfterT = new Date().getTime();
+            const pageload = initialLoadT - loadAfterT
+            
             if(initial === undefined){
                   initial = timeStamp
             }
@@ -29,18 +32,22 @@ const Preloader = () => {
                   const count = Math.min(0.1 * elapsed, 100);
 
                   if(preloaderBar !== undefined){
-                           preloaderBar.current.style.width = `${count}%`
+                           preloaderBar.style.width = `${count}%`
                   }
                   if (count === 100) done = true
             }
 
-            if(!done){
-                   window.requestAnimationFrame(playLoader(2000))
+            if(elapsed < Math.abs(pageload)){
+                    prevTimeStamp = timeStamp;
+
+                    if(!done){
+                           window.requestAnimationFrame(playLoader)
+                    }
             }
     }
 
     window.addEventListener("load", () => {
-             window.requestAnimationFrame(playLoader(2000))
+             window.requestAnimationFrame(playLoader)
     })
   return (
     <div className="preloader">
