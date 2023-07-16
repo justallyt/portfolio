@@ -1,8 +1,10 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import { useEffect } from "react"
 import { useRef } from "react"
 import { gsap, Power4 } from "gsap"
+import { loadContext } from "../util"
 const Preloader = () => {
+   const [loadStatus, setLoadStatus] = useContext(loadContext);
     const [preloaderCols, setPreloaderCols] = useState()
     const [preloaderLine, setPreloaderLine] = useState()
     const [preloaderBar, setPreloaderBar] = useState()
@@ -56,18 +58,9 @@ const Preloader = () => {
                                          ease: Power4.easeOut,
                                   })
                           
-                                  const cols = preloaderCols.querySelectorAll(".preloader-col")
+                                  //const cols = preloaderCols.querySelectorAll(".preloader-col")
                                   setTimeout(() => {
-                                          for(let i = 0 ; i < cols.length; i++){
-                                         tl.to(cols[0], {
-                                                y: '-100%',
-                                               duration: 0.5
-                                          })
-                                        tl.to(cols[1], {
-                                                y: '100%',
-                                                duration: 0.5
-                                        })
-                                    }
+                                         setLoadStatus(false)
                                   }, 1500)
                          }
                   }

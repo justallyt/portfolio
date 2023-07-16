@@ -10,13 +10,14 @@ import BlogSection from "./components/BlogSection";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Preloader from "./components/Preloader";
+import { loadContext } from "./util.js";
 function App() {
   const [ loader, setLoader] = useState(true)
   useEffect(()=> {
          AOS.init()
   })
   return (
-    <>
+    <loadContext.Provider value={[loader, setLoader]}>
           { loader ? <Preloader /> : 
                   <>
                            <Nav />
@@ -30,7 +31,7 @@ function App() {
                   </>
           }
   
-    </>
+    </loadContext.Provider>
   )
 }
 
