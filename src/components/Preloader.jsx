@@ -56,19 +56,19 @@ const Preloader = () => {
                                          ease: Power4.easeOut,
                                   })
                           
-                                  if(preloaderCols){
-                                        const cols = preloaderCols.querySelectorAll(".preloader-col")
-                                        for(let i = 0 ; i < cols.length; i++){
-                                               tl.to(cols[0], {
-                                                      y: '-100%',
-                                                     duration: 0.5
-                                                })
-                                              tl.to(cols[1], {
-                                                      y: '100%',
-                                                      duration: 0.5
-                                              })
-                                         }
-                                 }
+                                  const cols = preloaderCols.querySelectorAll(".preloader-col")
+                                  setTimeout(() => {
+                                          for(let i = 0 ; i < cols.length; i++){
+                                         tl.to(cols[0], {
+                                                y: '-100%',
+                                               duration: 0.5
+                                          })
+                                        tl.to(cols[1], {
+                                                y: '100%',
+                                                duration: 0.5
+                                        })
+                                    }
+                                  }, 1500)
                          }
                   }
             }
